@@ -1,0 +1,1 @@
+# Wildfire-detection-and-its-spead-prediction
