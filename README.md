@@ -52,5 +52,13 @@ segmented masks.
 201911_Wildfire_AUS dataset from https://hddsexplorer.usgs.gov/ <br>
 Model weights: https://drive.google.com/drive/folders/1cx88n_j9XkkOYfIMtQ7rPZtYMffd0kAi?usp=share_link <br>
 
+## Sample outputs
+<img src="https://github.com/navroop005/Wildfire-detection-and-its-spead-prediction/blob/3d0bb2cf02ffdc56caf7632929b17a48ce72ccdf/sample_outputs/L1C_T56HKJ_A023050_20191121T000241_B12_B11_B8A_14.png" width=270/> <img src="https://github.com/navroop005/Wildfire-detection-and-its-spead-prediction/blob/3d0bb2cf02ffdc56caf7632929b17a48ce72ccdf/sample_outputs/L1C_T56HKJ_A023050_20191121T000241_B12_B11_B8A_14_mask.png" width=270/>
+<br>
+
+<img src="https://github.com/navroop005/Wildfire-detection-and-its-spead-prediction/blob/3d0bb2cf02ffdc56caf7632929b17a48ce72ccdf/sample_outputs/L1C_T56HKJ_A023050_20191121T000241_B12_B11_B8A_6.png" width=270/> <img src="https://github.com/navroop005/Wildfire-detection-and-its-spead-prediction/blob/3d0bb2cf02ffdc56caf7632929b17a48ce72ccdf/sample_outputs/L1C_T56HKJ_A023050_20191121T000241_B12_B11_B8A_6_mask.jpeg" width=270/>
+<br>
+
+<img src="https://github.com/navroop005/Wildfire-detection-and-its-spead-prediction/blob/3d0bb2cf02ffdc56caf7632929b17a48ce72ccdf/sample_outputs/L1C_T56HKJ_A023050_20191121T000241_B12_B11_B8A_9.png" width=270/> <img src="https://github.com/navroop005/Wildfire-detection-and-its-spead-prediction/blob/3d0bb2cf02ffdc56caf7632929b17a48ce72ccdf/sample_outputs/L1C_T56HKJ_A023050_20191121T000241_B12_B11_B8A_9_mask.png" width=270/>
 
 
