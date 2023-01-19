@@ -25,40 +25,42 @@ segmented masks.
 ## Files
 1. ***calc_thresholds.ipynb:***
     This file will iterate over all files and calculate thresholds to be used for preprocessing. It will store thresholds to *band_thresholds.json*
-1. ***preprocessing.ipynb:***
+
+2. ***preprocessing.ipynb:***
     This file is used to convert the raw SENTINEL-2 data to processed png files. 
     Preprocessing include opening the jp2 image files for different bands using gdal library,
     finding the correct range of data to be interpolated to 0 to 255 brighness levels of image.
     The input images are divided into 16 images to reduce the resolution for further processing
 
-2. ***cnn_clasification.ipynb:***
+3. ***cnn_clasification.ipynb:***
     This file is used to train CNN based classifier to classify the 300x300 patches on the input 
     images into 3 classes: patches that have completely burned area, completely unburned vegetation 
     and patches that contain mixed area (both burned, unburned or other)
 
-3. ***unet_segmentation.ipynb:***
+4. ***unet_segmentation.ipynb:***
     This file is used to train UNET based segmentaion model to segment the 300x300 patches from 
     mixed class of cnn_clasification to burned area, unburned area, and other areas (residence, 
     rivers, cloud covered, etc)
 
-4. ***predict.ipynb:***
+5. ***predict.ipynb:***
     This file use trained models from cnn_clasification and unet_segmentation and output predictions
     combined to one image file for given tile_id and tile_no (0 to 15 from preprocessing.ipynb)
 
-5. ***all_data_predict.ipynb:***
+6. ***all_data_predict.ipynb:***
     This file is used to iterate over all image files, segment the data and save them.
+
+7. ***classify_mask.ipynb:***
+    Divide label masks and bands images to patches 
 
 ## Data source used
 201911_Wildfire_AUS dataset from https://hddsexplorer.usgs.gov/ <br>
 Model weights: https://drive.google.com/drive/folders/1cx88n_j9XkkOYfIMtQ7rPZtYMffd0kAi?usp=share_link <br>
 
 ## Sample outputs
-<img src="https://github.com/navroop005/Wildfire-detection-and-its-spead-prediction/blob/3d0bb2cf02ffdc56caf7632929b17a48ce72ccdf/sample_outputs/L1C_T56HKJ_A023050_20191121T000241_B12_B11_B8A_14.png" width=270/> <img src="https://github.com/navroop005/Wildfire-detection-and-its-spead-prediction/blob/3d0bb2cf02ffdc56caf7632929b17a48ce72ccdf/sample_outputs/L1C_T56HKJ_A023050_20191121T000241_B12_B11_B8A_14_mask.png" width=270/>
+<img src="sample_outputs/L1C_T52VDQ_A031918_20210802T025547_B12_B11_B8A_3.jpg" width=270/> <img src="sample_outputs/L1C_T52VDQ_A031918_20210802T025547_3.png" width=270/>
 <br>
 
-<img src="https://github.com/navroop005/Wildfire-detection-and-its-spead-prediction/blob/3d0bb2cf02ffdc56caf7632929b17a48ce72ccdf/sample_outputs/L1C_T56HKJ_A023050_20191121T000241_B12_B11_B8A_6.png" width=270/> <img src="https://github.com/navroop005/Wildfire-detection-and-its-spead-prediction/blob/3d0bb2cf02ffdc56caf7632929b17a48ce72ccdf/sample_outputs/L1C_T56HKJ_A023050_20191121T000241_B12_B11_B8A_6_mask.jpeg" width=270/>
+<img src="sample_outputs/L1C_T56JLL_A023050_20191121T000241_B12_B11_B8A_12.jpg" width=270/> <img src="sample_outputs/L1C_T56JLL_A023050_20191121T000241_12.png" width=270/>
 <br>
 
-<img src="https://github.com/navroop005/Wildfire-detection-and-its-spead-prediction/blob/3d0bb2cf02ffdc56caf7632929b17a48ce72ccdf/sample_outputs/L1C_T56HKJ_A023050_20191121T000241_B12_B11_B8A_9.png" width=270/> <img src="https://github.com/navroop005/Wildfire-detection-and-its-spead-prediction/blob/3d0bb2cf02ffdc56caf7632929b17a48ce72ccdf/sample_outputs/L1C_T56HKJ_A023050_20191121T000241_B12_B11_B8A_9_mask.png" width=270/>
-
-
+<img src="sample_outputs/L1C_T56JMN_A014170_20191122T235242_B12_B11_B8A_13.jpg" width=270/> <img src="sample_outputs/L1C_T56JMN_A014170_20191122T235242_13.png" width=270/>
